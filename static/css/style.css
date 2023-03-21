@@ -1,0 +1,835 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* css variables */
+:root {
+    --bg-color: #F7F7F7;
+    --text-color: #434343;
+    --main-color: #EE4967;
+    --modal-bg: rgba(56, 145, 56, 0.8);
+    --main-color-opacity:rgb(238, 73, 103, 0.1);
+    --box-shadow-color: #00000029;
+    --white-color: #ffffff;
+    --size-12: 12px;
+    --size-14: 14px;
+    --size-15: 15px;
+    --size-16: 16px;
+    --size-18: 18px;
+    --size-20: 20px;
+    --size-22: 22px;
+    --size-24: 24px;
+    --size-25: 25px;
+    --size-27: 27px;
+    --size-28: 28px;
+    --size-30: 30px;
+    --size-33: 33px;
+    --size-38: 38px;
+    --size-40: 40px;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Helvetica', sans-serif; 
+    src: url(../fonts/Helvetica\ Neue\ Medium\ Extended.ttf);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    font-family: 'Helvetica', sans-serif; 
+}
+
+.div-h2 {
+    display: flex;
+    justify-content: center;
+    padding-block: 21px;
+    background-color: var(--main-color-opacity);
+}
+
+h2 {
+    font-size: var(--size-20);
+    font-weight: var(--fw-medium);
+    font-family: 'Helvetica', sans-serif;
+}
+
+.last-word {
+    color: var(--main-color);
+}
+
+.section-cards {
+    margin-bottom: 110px;
+}
+
+/* header*/
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--bg-color);
+}
+
+header nav{
+    max-width: 1366px;
+    width: 100%;
+    align-items: center;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav > h3, header nav > a {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+header nav .burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: none;
+}
+
+header nav .burger > div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+header nav .nav-wrapper {
+    display: flex;
+    gap: 56px;
+}
+
+
+header nav .nav-wrapper li a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--text-color)
+}
+
+header nav .user{
+    display: flex;
+    gap: 41px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav .nav-wrapper {
+        display: none;
+    }
+
+    header nav .nav-wrapper.nav-links-burger {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1rem;
+    }   
+
+    header nav .user {
+        display: none;
+    }
+
+    header nav .burger {
+        position: absolute;
+        display: block;
+        top: 3rem;
+        right: 1rem;
+    }
+
+    header nav .nav-wrapper li{
+        text-align: center;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    header nav .nav-wrapper li:hover {
+        background-color: black;
+    }
+
+    header nav .nav-wrapper li a:hover {
+        color: var(--white-color);
+    }
+}
+
+
+/* section 1 */
+
+.section-1 .main-nav nav ul {
+    gap: 187px;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.section-1 .main-nav  nav ul li {
+    padding: 3px;
+    border: 2px solid var(--main-color);
+    text-align: center;
+}
+
+.section-1 .main-nav nav ul li a {
+    padding: 12px;
+    text-decoration: none;
+    list-style: none;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color: var(--white-color);
+    border-radius: 6px;
+    display: block;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.section-1 .main-nav nav ul li a img {
+    margin-right: 20px;
+}
+
+.section-1 .main-nav h1 {
+    margin-top: 82px;
+    font-size: var(--size-40);
+    color: var(--text-color);
+    margin-bottom: 418px;
+}
+
+/* section 2 */
+
+
+.section-cards h3 {
+    margin-top: 35px;
+    font-size: var(--size-16);
+    color: var(--text-color);
+    margin-bottom: 83px;
+}
+
+.section-cards .cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.section-cards .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 2px 10px #00000029;
+    max-width: 312px;
+    width: 100%;
+    position: relative;
+}
+
+.section-cards .cards .card img {
+    background: var(--main-color);
+    border-radius: 50%;
+    padding: 15px 10px 6px 10px;
+    border: 15px solid white;
+    box-shadow: 0px 3px 6px #00000029;
+    position: absolute;
+    top: -25%;
+}
+
+.section-cards .cards .card h4 {
+    color: var(--text-color);
+    font-size: var(--size-16);
+    font-family: 'Helvetica', sans-serif; 
+    margin-top: 102px;
+}
+
+.section-cards .cards .card button, .section-cards .cards .card a {
+    margin-block: 48px 31px;
+    padding: 7px 17px;
+    font-family: 'Helvetica', sans-serif; 
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section-cards .cards .moving-arrow{
+    cursor: pointer;
+}
+
+/* section 3 */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 132px;
+    margin-top: 55px;
+}
+
+.flex-container div {
+    text-align: center;
+}
+
+.flex-container div img {
+    padding: 20px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px #00000029;
+    margin-bottom: 40px;
+}
+
+.flex-container div h4 {
+    color: var(--text-color);
+    font-family: 'Helvetica', sans-serif; 
+
+}
+
+/* section 4 */
+
+.section-customers {
+    margin-bottom: 112px;
+}
+
+.section-customers h3 {
+    margin-top: 36px;
+}
+
+.section-customers .customers-wrapper {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.section-customers .customers-wrapper > div {
+    text-align: center;
+    max-width: 392px;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 20px;
+    box-shadow: 1px 1px 6px #00000029;
+}
+
+.section-customers .customers-wrapper div p {
+    color: var(--text-color);
+    padding-block: 30px;
+}
+
+.section-customers .customers-wrapper div div {
+    display: flex;
+    gap: 28px;
+}
+
+.section-customers .customers-wrapper div div div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.section-customers .customers-wrapper div div div span:last-child {
+    color: yellow;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--main-color);
+    padding: 77px 85px 67px 70px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    gap: 40px;
+}
+
+.grid-container .first-column a {
+    color: var(--white-color);
+    font-family: 'Helvetica', sans-serif; 
+}
+
+.grid-container .first-column form input{
+    border: none;
+    border-radius: 6px;
+    margin-block: 25px;
+    padding: 10px 12px 10px 0;
+}
+
+.grid-container .first-column .social-icons {
+    display: flex;
+    gap: 31px;
+}
+
+
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 45px;
+}
+
+.grid-container .second-column .grid-menu a, .grid-container .third-column a {
+    color: var(--white-color);
+    font-size: 14px;
+    font-family: 'Helvetica', sans-serif; 
+}
+
+.second-column .apple-google-img {
+    margin-top: 90px;
+    display: flex;
+    gap: 27px;
+    position: absolute;
+    left: 32%;
+}
+
+.third-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* health page  */
+
+.health-main {
+    padding-left: 69px;
+}
+
+.health-main > div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 58px;
+}
+
+.health-main .health-img {
+    padding: 27px 0 27px 27px;
+    background-color: var(--main-color-opacity);   
+}
+
+.health-main .health-img img {
+    width: 758px;
+}
+
+.health-main .health-insurance {
+    display: flex;
+    flex-direction: column;
+}
+
+.health-main .health-insurance h1 {
+    margin-top: 150px;
+    font-size: var(--size-28);
+    line-height: 40px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.health-main .health-insurance h3 {
+    max-width: 330px;
+    width: 100%;
+    line-height: 25px;
+    font-size: var(--size-20);
+    margin-top: 40px;
+}
+
+.health-main .health-insurance div button, .health-cards div a {
+    margin-block: 48px 31px;
+    padding: 7px 17px;
+    font-family: 'Helvetica', sans-serif; 
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* page 2 secton 2 */
+
+.health-cards-section {
+    margin-top: 87px;
+}
+
+.health-cards-section .health-cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 26px;
+}
+
+.health-cards-section .health-cards .health-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-block: 25px;
+    max-width: 392px;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 30px;
+    height: 595px;
+}
+
+.health-cards-section .health-cards .health-card h4 {
+    font-size: var(--size-18);
+    color: var(--main-color);
+}
+
+.health-cards-section .health-cards .health-card p {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 25px;
+}
+
+.health-cards div a {
+    padding: 10px 23px;
+    font-family: 'Helvetica', sans-serif; 
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.health-cards {
+    margin-block: 45px;
+}
+
+.health-card {
+    box-shadow: 0px 2px 6px #00000029;
+    border-radius: 6px;
+}
+
+/* page 2 secton 3 */
+
+.health-program .program-cards {
+    display: flex;
+    justify-content: center ;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    margin-top: 72px;
+}
+
+
+.health-program .program-cards .program-card {
+    background-color: var(--main-color);
+    padding: 22px 30px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.health-program .program-cards .program-card .white-bg {   
+    background-color: var(--white-color);
+    border-radius: 6px;
+    margin-top: 15.5px;
+    padding-inline: 24px;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 310px;
+}
+
+.health-program .program-cards .program-card h5 {
+    color: var(--white-color);
+    margin-bottom: 14px;
+    font-size: var(--size-17);
+}
+
+.health-program .program-cards .program-card .white-bg div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.health-program .program-cards .program-card .white-bg div h6, 
+.health-program .program-cards .program-card .pink-bg div h6 {
+    font-size: 13px;
+    font-weight: var(--fw-regular);
+    font-family: 'Helvetica', sans-serif; 
+}
+
+.health-program .program-cards .program-card .white-bg div span,
+.health-program .program-cards .program-card .pink-bg div span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.health-program .program-cards .program-card .pink-bg div h6,
+.health-program .program-cards .program-card .pink-bg div span {
+    color: var(--white-color);
+}
+
+.health-program .program-cards .program-card .pink-bg div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.health-program h3 {
+    margin-top: 131px;
+}
+
+.health-program div button {
+    margin-block: 43px 68px;
+    padding: 10px 20px;
+    font-family: 'Helvetica', sans-serif; 
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+/* page 3 input section */
+
+.input-section {
+    padding-inline: 45px 100px;
+    margin-bottom: 111px;
+}
+
+.input-section h3 {
+    font-family: 'Helvetica', sans-serif; 
+    font-weight: var(--fw-regular);
+    font-size: var(--size-20);
+    color: black;
+    margin-top: 90px;
+    margin-bottom: 22px;
+}
+
+.input-section .input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 45px;
+    padding: 15px;
+    background-color: var(--white-color);
+    margin-top: 80px;
+    justify-content: center;
+    box-shadow: 0px 2px 10px #00000029;
+}
+
+.input-section .input-wrapper .contact-card {
+    padding: 81px 20px 90px 48px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+
+}
+
+.input-section .input-wrapper .contact-card h3 {
+    font-size: var(--size-24);
+    color: var(--white-color);
+    font-family: 'Helvetica', sans-serif; 
+    font-weight: var(--fw-regular)
+}
+
+.input-section .input-wrapper .contact-card p {
+    font-size: var(--size-16);
+    font-weight: 300;
+    font-family: 'Helvetica', sans-serif; 
+    color: var(--white-color);
+    margin-top: 38px;
+}
+
+.input-section .input-wrapper .contact-card div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 33px;
+    margin-top: 84px;
+    align-items: center;
+}
+
+.input-section .input-wrapper .contact-card div a {
+    color: var(--white-color);
+    font-size: 18px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: var(--fw-regular); 
+
+}
+
+.input-section .input-wrapper div form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 62px;
+    padding-block: 25px;
+
+}
+
+.input-section .input-wrapper div form div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-section .input-wrapper div form div label {
+    font-size: 14px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: var(--fw-regular); 
+    color: var(--text-color);
+    opacity: 80%;
+}
+
+.input-section .input-wrapper div form div input {
+    padding-block: 6px;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    outline: none;
+}
+
+.input-section .input-wrapper div form .textarea {
+    grid-column: 1/3;
+    width: 684px;
+    resize: none;
+    padding: 14px 18px;
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-section .input-wrapper div form .textarea::placeholder {
+    opacity: 40%;
+    font-size: 14px;
+}
+
+.input-section .input-wrapper div form .button-submit {
+    padding: 10px 55px;
+    font-family: 'Helvetica', sans-serif; 
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: var(--fw-medium);
+    grid-column: 2/3;
+}
+
+/* modal page */
+
+
+.modal-wrapper {
+    position: fixed;
+    inset: 0;
+    background-color: var(--modal-bg);
+    display: none;
+    place-items: center;
+
+}
+
+.modal-window {
+    position: relative;
+    width: 70vw;
+    height: 80vh;
+    background-color: salmon;
+    padding: 2rem;
+} 
+
+.modal-window div p, .modal-window div h3 {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    color: white;
+}
+
+.modal-wrapper div button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.close-button:hover {
+    transform: scale(1.2);
+}
+.modal-header {
+    text-align: center;
+}
+.modal-content {
+    max-height: 80%;
+    height: 60%;
+    padding: 1rem 0;
+}
+
+.modal-wrapper.active {
+    display: grid;
+}
+
+
+@media (max-width: 960px) {
+    .main-nav nav .flex-center {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-cards .cards {
+        flex-wrap: wrap;
+    }
+
+    .section-cards .flex-container {
+        flex-wrap: wrap;
+    }
+
+    .section-customers .customers-wrapper {
+        flex-wrap: wrap;
+    }
+
+    footer .grid-container {
+        display: flex;
+        flex-wrap: wrap ;
+    }
+
+    footer .grid-container .second-column .apple-google-img {
+        display: none;
+    }
+
+    .input-section .input-wrapper {
+        grid-template-columns: 1fr
+    }
+
+    .input-section .input-wrapper .input-card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .input-section .input-wrapper .input-card form div input {
+        width: 100px;
+    }
+
+    .health-main div {
+        grid-template-columns: 1fr;
+    }
+
+    .health-cards-section div:not(:first-child) {
+        display: flex;
+        flex-wrap: wrap
+    };
+    .health-program .program-cards {
+        display: flex;
+        flex-wrap: wrap
+    }
+}
